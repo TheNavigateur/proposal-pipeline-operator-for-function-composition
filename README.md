@@ -1,4 +1,4 @@
-# Function composition operator
+# `|>` for function composition
 
 A proposal here https://github.com/tc39/proposal-pipeline-operator describes an alternative syntax for calling a function and passing its result to another function. The current syntax:
 
