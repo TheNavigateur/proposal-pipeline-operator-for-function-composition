@@ -26,3 +26,5 @@ could be rewritten as:
 ```javascript
 const doubleThenSquare = double |> square
 ```
+
+Further discussion: https://github.com/tc39/proposal-pipeline-operator/issues/50
