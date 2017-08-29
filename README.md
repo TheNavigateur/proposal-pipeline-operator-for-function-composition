@@ -48,8 +48,7 @@ e.g. for composing functions in a loop.
 
 # Why `+>`?
 
-So as not to conflict with the pipeline-operator proposal here: https://github.com/tc39/proposal-pipeline-operator which has prior art in other languages, as well as expressing accumulation via the `+`.
-Further discussion: https://github.com/tc39/proposal-pipeline-operator/issues/50
+To express accumulation via the `+` and function ordering via the `>`, and so as not to conflict with the pipeline-operator proposal here: https://github.com/tc39/proposal-pipeline-operator which has prior art from other languages. Discussion: https://github.com/tc39/proposal-pipeline-operator/issues/50
 
 # Operator precedence
 
