@@ -30,7 +30,7 @@ as:
 const switchOnEngineThenDrive = switchOnEngine +> drive
 ```
 
-Although it evaluates to `drive(switchOnEngine())`, it is the same for all intents and purposes, in cases of no-args functions.
+Although it evaluates to `drive(switchOnEngine())`, it behaves the same for all intents and purposes, in cases of no-args functions.
 
 As an analogy for how `x += y` is shorthand for `x = x + y`, the following:
 
