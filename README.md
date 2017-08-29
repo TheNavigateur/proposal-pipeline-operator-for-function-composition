@@ -14,12 +14,13 @@ const doubleThenSquareThenHalf = double +> square +> half
 
 It would accept a promise (asynchronous function) as any of its operands, upon which the expression will evaluate to a promise:
 
-```
+```javascript
+const doubleThenSquareThenHalf = await double +> squareAsync +> half
+
+//where:
 async function fetchSquareAsync(value){
     //
 }
-
-const doubleThenSquareThenHalf = await double +> squareAsync +> half
 ```
 
 It could be used to tersely express the following:
@@ -30,21 +31,21 @@ const switchOnEngineThenDrive = ()=>{switchOnEngine(); drive();}
 
 as:
 
-```
+```javascript
 const switchOnEngineThenDrive = switchOnEngine +> drive
 ```
 
-Although it evaluates to `drive(switchOnEngine())`, it is the same for all intents and purposes cases of no-args functions.
+Although it evaluates to `drive(switchOnEngine())`, it is the same for all intents and purposes, in cases of no-args functions.
 
 As an analogy for how `x += y` is shorthand for `x = x + y`, the following:
 
-```
+```javascript
 x +>= y
 ```
 
 could be expressed as a shorthand for
 
-```
+```javascript
 x = x +> y
 ```
 
@@ -59,7 +60,7 @@ Further discussion: https://github.com/tc39/proposal-pipeline-operator/issues/50
 
 It should glue more strongly than `await`, and more strongly than `|>` should that be introduced into the language too, so that:
 
-```
+```javascript
 const output = 100 |> processIterations +> generateOutput
 ```
 
