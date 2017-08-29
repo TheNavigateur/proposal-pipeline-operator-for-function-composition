@@ -16,11 +16,6 @@ It would accept a promise (asynchronous function) as any of its operands, upon w
 
 ```javascript
 const doubleThenSquareThenHalf = await double +> squareAsync +> half
-
-//where:
-async function fetchSquareAsync(value){
-    //
-}
 ```
 
 It could be used to tersely express the following:
