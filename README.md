@@ -1,30 +1,66 @@
-# `|>` for function composition
+# `+>` for function composition
 
-A proposal here https://github.com/tc39/proposal-pipeline-operator describes an alternative syntax for calling a function and passing its result to another function. The current syntax:
-
-```javascript
-const doubledThenSquaredAnswer = square(double(value))
-```
-could thus be rewritten as
+The statement:
 
 ```javascript
-const doubledThenSquaredAnswer = value |> double |> square
+const doubleThenSquareThenHalf = value=>half(square(double(value)))
 ```
 
-This straightens the ordering and replaces `()` with with using `|>` in a linear fashion but doesn't save code otherwise. The other problem though is that the first expression is different in usage type to the second and third: `InputExpression |> FunctionExpression |> FunctionExpression` which has a logical inconsistency, even while the existing syntax, which is well understood, doesn't.
-
-However thanks to a query from Simon Staton here: https://esdiscuss.org/topic/native-function-composition and the resulting speculation, the `|>` operator could be more useful in terms of code terseness as well as having logical consistency, as a function composition operator instead:
-
-The current syntax:
+would be rewritable as:
 
 ```javascript
-const doubleThenSquare = value=>square(double(value))
+const doubleThenSquareThenHalf = double +> square +> half
 ```
 
-could be rewritten as:
+It would accept a promise (asynchronous function) as any of its operands, upon which the expression will evaluate to a promise:
+
+```
+async function fetchSquareAsync(value){
+    //
+}
+
+const doubleThenSquareThenHalf = await double +> squareAsync +> half
+```
+
+It could be used to tersely express the following:
 
 ```javascript
-const doubleThenSquare = double |> square
+const switchOnEngineThenDrive = ()=>{switchOnEngine(); drive();}
 ```
 
+as:
+
+```
+const switchOnEngineThenDrive = switchOnEngine +> drive
+```
+
+Although it evaluates to `drive(switchOnEngine())`, it is the same for all intents and purposes cases of no-args functions.
+
+As an analogy for how `x += y` is shorthand for `x = x + y`, the following:
+
+```
+x +>= y
+```
+
+could be expressed as a shorthand for
+
+```
+x = x +> y
+```
+
+e.g. for composing functions in a loop.
+
+# Why `+>`?
+
+So as not to conflict with the pipeline-operator proposal here: https://github.com/tc39/proposal-pipeline-operator which has prior art in other languages, as well as expressing accumulation via the `+`.
 Further discussion: https://github.com/tc39/proposal-pipeline-operator/issues/50
+
+# Operator precedence
+
+It should glue more strongly than `await`, and more strongly than `|>` should that be introduced into the language too, so that:
+
+```
+const output = 100 |> processIterations +> generateOutput
+```
+
+behaves as you would want.
