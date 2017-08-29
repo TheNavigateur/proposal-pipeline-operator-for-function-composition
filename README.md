@@ -12,7 +12,7 @@ would be rewritable as:
 const doubleThenSquareThenHalf = double +> square +> half
 ```
 
-It would accept a promise (asynchronous function) as any of its operands, upon which the expression will evaluate to a promise:
+It would accept a promise (asynchronous function) as any of its operands, upon which the expression would also evaluate to a promise:
 
 ```javascript
 const doubleThenSquareThenHalf = await double +> squareAsync +> half
@@ -26,7 +26,7 @@ async function fetchSquareAsync(value){
 It could be used to tersely express the following:
 
 ```javascript
-const switchOnEngineThenDrive = ()=>{switchOnEngine(); drive();}
+const switchOnEngineThenDrive = ()=>{switchOnEngine(); drive()}
 ```
 
 as:
