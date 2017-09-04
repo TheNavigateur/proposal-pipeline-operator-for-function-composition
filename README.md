@@ -15,7 +15,7 @@ const doubleThenSquareThenHalf = double +> square +> half
 As well as a function, it would also accept a promise (asynchronous function) as any of its operands, upon which the expression would also evaluate to a promise:
 
 ```javascript
-const doubleThenSquareThenHalf = await double +> squareAsync +> half
+const doubleThenSquareThenHalfAsync = double +> squareAsync +> half
 ```
 
 It could be used to tersely express the following:
@@ -49,13 +49,3 @@ e.g. for composing functions in a loop.
 # Why `+>`?
 
 To express accumulation via the `+` and function ordering via the `>`, and so as not to conflict with the pipeline-operator proposal here: https://github.com/tc39/proposal-pipeline-operator which has prior art from other languages. Discussion: https://github.com/tc39/proposal-pipeline-operator/issues/50
-
-# Operator precedence
-
-It should glue more strongly than `await`, and more strongly than `|>` should that be introduced into the language too, so that:
-
-```javascript
-const output = 100 |> processIterations +> generateOutput
-```
-
-behaves as you would want.
