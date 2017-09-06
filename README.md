@@ -18,7 +18,7 @@ As well as a function, it would also accept a promise (asynchronous function) as
 const doubleThenSquareThenHalfAsync = double +> squareAsync +> half
 ```
 
-It could be used to tersely express the following:
+It would be usable to tersely express the following:
 
 ```javascript
 const switchOnEngineThenDrive = ()=>{switchOnEngine(); drive()}
@@ -38,7 +38,7 @@ As an analogy for how `x += y` is shorthand for `x = x + y`, the following:
 x +>= y
 ```
 
-could be expressed as a shorthand for
+would be expressable as a shorthand for
 
 ```javascript
 x = x +> y
