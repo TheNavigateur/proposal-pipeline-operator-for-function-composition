@@ -32,16 +32,16 @@ const switchOnEngineThenDrive = switchOnEngine +> drive
 
 Although it evaluates to `drive(switchOnEngine())`, it behaves the same as sequential execution for all intents and purposes, in cases of no-args functions.
 
-As an analogy for how `x += y` is shorthand for `x = x + y`, the following:
-
-```javascript
-x +>= y
-```
-
-would be expressable as a shorthand for
+As an analogy for how `x = x + y` is expressable as `x += y`, the following:
 
 ```javascript
 x = x +> y
+```
+
+would be expressable as:
+
+```javascript
+x +>= y
 ```
 
 e.g. for composing functions in a loop.
