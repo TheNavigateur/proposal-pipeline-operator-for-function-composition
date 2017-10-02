@@ -3,7 +3,7 @@
 The statement:
 
 ```javascript
-const doubleThenSquareThenHalf = value=>half(square(double(value)))
+const doubleThenSquareThenHalf = value => half(square(double(value)))
 ```
 
 would be rewritable as:
@@ -21,7 +21,7 @@ const doubleThenSquareThenHalfAsync = double +> squareAsync +> half
 It would be usable to tersely express the following:
 
 ```javascript
-const switchOnEngineThenDrive = ()=>{switchOnEngine(); drive()}
+const switchOnEngineThenDrive = driver => drive(switchOnEngine(driver))
 ```
 
 as:
