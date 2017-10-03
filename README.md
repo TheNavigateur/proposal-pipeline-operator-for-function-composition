@@ -12,7 +12,7 @@ would be rewritable as:
 const doubleThenSquareThenHalf = double +> square +> half
 ```
 
-As well as a function, it would also accept a promise (asynchronous function) as any of its operands, upon which the expression would also evaluate to a promise:
+As well as a function, it would also accept an asynchronous function as any of its operands, upon which the expression would also evaluate to an asynchronous function:
 
 ```javascript
 const doubleThenSquareThenHalfAsync = double +> squareAsync +> half
