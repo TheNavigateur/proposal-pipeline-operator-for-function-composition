@@ -12,10 +12,26 @@ would be rewritable as:
 const doubleThenSquareThenHalf = double +> square +> half
 ```
 
-As well as a function, it would also accept an asynchronous function as any of its operands, upon which the expression would also evaluate to an asynchronous function:
+If an async function is used as an operand, the expression would also evaluate to an async function:
 
 ```javascript
 const doubleThenSquareThenHalfAsync = double +> squareAsync +> half
+```
+
+If a generator function is used as an operand, the expression would also evaluate to a generator function that pipes each yielded value of the supplied generator function to the subsequent functions:
+
+```javascript
+const randomBetween1And100Generator = randomBetween0And1Generator +> multiplyBy100
+```
+
+The expression evaluates to an async generator function if either or both the generator function or any of the other functions are async:
+
+```javascript
+const nextRouteAsyncGenerator = newLocationGenerator +> calculateRouteAsync
+```
+
+```javascript
+const nextRouteAsyncGenerator = newLocationAsyncGenerator +> calculateRoute
 ```
 
 It would be usable to tersely express the following:
