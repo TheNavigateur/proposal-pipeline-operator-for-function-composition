@@ -8,25 +8,25 @@ The statement:
 const doubleThenSquareThenHalf = value=>half(square(double(value)))
 ```
 
-would be rewritable as:
+is rewritable as:
 
 ```javascript
 const doubleThenSquareThenHalf = double +> square +> half
 ```
 
-If an async function is used as an operand, the expression would evaluate to an async function:
+If an async function is introduced, the expression evaluates to an async function:
 
 ```javascript
 const doubleThenSquareThenHalfAsync = double +> squareAsync +> half
 ```
 
-If a generator function is used as an operand, the expression would evaluate to a generator function that pipes each yielded value to subsequent functions:
+If a generator function is introduced, the expression evaluates to a generator function that pipes each yielded value to subsequent functions:
 
 ```javascript
 const randomBetween1And100Generator = randomBetween0And1Generator +> multiplyBy100
 ```
 
-The expression would evaluate to an async generator function if either or both the generator function and/or any of the other functions are async:
+The expression evaluates to an async generator function if either or both the generator function and/or any of the other functions are async:
 
 ```javascript
 const nextRouteAsyncGenerator = newLocationGenerator +> calculateRouteAsync //sync generator, async function
