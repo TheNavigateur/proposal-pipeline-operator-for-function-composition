@@ -1,5 +1,7 @@
 # `+>` for function composition
 
+Summary: a proposed function composition operator that allows terse and natural composition from and to any of the 4 function types: function, asynchronous function, generator function and asynchronous generator function.
+
 The statement:
 
 ```javascript
