@@ -14,19 +14,19 @@ is rewritable as:
 const doubleThenSquareThenHalf = double +> square +> half
 ```
 
-If an async function is introduced, the expression evaluates to an async function:
+Introducing an async function makes the expression evaluate to an async function:
 
 ```javascript
 const doubleThenSquareThenHalfAsync = double +> squareAsync +> half
 ```
 
-If a generator function is introduced, the expression evaluates to a generator function that pipes each yielded value to subsequent functions:
+Introducting a generator function makes the expression evaluate to a generator function that pipes each yielded value to subsequent functions:
 
 ```javascript
 const randomBetween1And100Generator = randomBetween0And1Generator +> multiplyBy100
 ```
 
-The expression evaluates to an async generator function if either or both the generator function and/or any of the other functions are async:
+Introducing an async function and a generator function, or an async generator function, makes the expression evaluate to an async generator function:
 
 ```javascript
 const nextRouteAsyncGenerator = newLocationGenerator +> calculateRouteAsync //sync generator, async function
