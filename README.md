@@ -24,7 +24,7 @@ If a `GeneratorFunction` is used as an operand, the expression would evaluate to
 const randomBetween1And100Generator = randomBetween0And1Generator +> multiplyBy100
 ```
 
-The expression evaluates to an `AsyncGeneratorFunction` if either or both the generator function or any of the other functions are async:
+The expression evaluates to an `AsyncGeneratorFunction` if either or both the generator function and/or any of the other functions are async:
 
 ```javascript
 const nextRouteAsyncGenerator = newLocationGenerator +> calculateRouteAsync //sync generator, async function
