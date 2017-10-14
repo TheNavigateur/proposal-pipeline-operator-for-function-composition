@@ -64,11 +64,11 @@ x +>= y
 
 e.g. for composing functions in a loop.
 
-# Why `+>`?
+## Why `+>`?
 
 To express accumulation via the `+` and function ordering via the `>`, and so as not to conflict with the pipeline-operator proposal here: https://github.com/tc39/proposal-pipeline-operator which has prior art from other languages. Discussion: https://github.com/tc39/proposal-pipeline-operator/issues/50
 
-# Why treat `AsyncFunction`, `GeneratorFunction` and `AsyncGeneratorFunction` differently than their promise/iterator returning `Function` equivalents? They are the same in all other contexts!
+## Why treat `AsyncFunction`, `GeneratorFunction` and `AsyncGeneratorFunction` differently than their promise/iterator returning `Function` equivalents? They are the same in all other contexts!
 
 ### 1. Semantic expectation.
 
