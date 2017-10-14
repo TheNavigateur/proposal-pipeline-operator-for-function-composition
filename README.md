@@ -99,3 +99,7 @@ For the same reasons, it is possible to compose async and generator functions wi
 ### 4. Piping promises and iterators would be supported otherwise anyway
 
 It is unclear what practical advantage there could possibly be of piping non-explicitly-returned promises/iterators instead of the declared output, especially since piping explicitly returned promises/iterators in a declared `Function` would work as expected anyway.
+
+## Isn't overloading an operator with different types producing different expression results a bad thing?
+
+There is precedent. `myNumber + 'myString'` has been and continues to be used perfectly intuitively since inception. The proposed expression results are intuitive based on the arguments supplied. It is necessary to allow composition between different function types, as the examples show, so it makes sense to allow them to use the same operator.
