@@ -85,7 +85,7 @@ I semantically expect `output` to be piped to the next function in the chain.
 
 For
 ```js
-function*{
+function*(){
     yield output;
 }
 ```
