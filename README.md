@@ -1,6 +1,6 @@
 # `+>` for function composition
 
-Summary: a proposed function composition operator that allows terse and intuitive composition from and to any of the 4 available function types: function, asynchronous function, generator function and asynchronous generator function.
+Summary: a proposed function composition operator that allows terse and intuitive left to right composition from and to any of the 4 available function types: function, asynchronous function, generator function and asynchronous generator function.
 
 The statement:
 
