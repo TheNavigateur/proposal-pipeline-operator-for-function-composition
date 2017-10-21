@@ -27,7 +27,7 @@ const doubleThenSquareThenHalfAsync = double +> squareAsync +> half
 Introducting a `GeneratorFunction` produces a `GeneratorFunction` that pipes each yielded value to subsequent functions:
 
 ```javascript
-const randomBetween1And100Generator = randomBetween0And1Generator +> multiplyBy100
+const randomBetween0And100Generator = randomBetween0And1Generator +> multiplyBy100
 ```
 
 Introducing an `AsyncFunction` and a `GeneratorFunction`, and/or an `AsyncGeneratorFunction`, produces an `AsyncGeneratorFunction`:
