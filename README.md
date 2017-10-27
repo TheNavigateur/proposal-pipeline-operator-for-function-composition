@@ -52,7 +52,7 @@ as:
 const switchOnEngineThenDrive = switchOnEngine +> drive
 ```
 
-Although it evaluates to `drive(switchOnEngine())`, it behaves the same as sequential execution for all intents and purposes, in cases of no-args functions.
+Although it evaluates to `drive(switchOnEngine())` upon execution, it behaves the same as sequential execution for all intents and purposes, in cases of no-args functions.
 
 As an analogy for how `x = x + y` is expressable as `x += y`, the following:
 
