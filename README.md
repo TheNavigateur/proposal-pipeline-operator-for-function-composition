@@ -33,11 +33,11 @@ const randomBetween0And100Generator = randomBetween0And1Generator +> multiplyBy1
 Introducing an `AsyncFunction` and a `GeneratorFunction`, and/or an `AsyncGeneratorFunction`, produces an `AsyncGeneratorFunction`:
 
 ```javascript
-const nextRouteAsyncGenerator = newLocationGenerator +> calculateRouteAsync //GeneratorFunction, AsyncFunction
+const nextRouteAsyncGenerator = nextLocationGenerator +> calculateRouteAsync //GeneratorFunction +> AsyncFunction
 ```
 
 ```javascript
-const nextRouteAsyncGenerator = newLocationAsyncGenerator +> calculateRoute //AsyncGeneratorFunction, Function
+const nextRouteAsyncGenerator = nextLocationAsyncGenerator +> calculateRoute //AsyncGeneratorFunction +> Function
 ```
 
 It would be usable to tersely express the following:
