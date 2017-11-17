@@ -4,6 +4,10 @@
 
 A proposed function composition operator that allows terse and intuitive composition, in execution order, from and to any of the 4 available function types: `Function`, `AsyncFunction`, `GeneratorFunction` and `AsyncGeneratorFunction`.
 
+## Purpose
+
+To significantly reduce code complexity and minimize the chances of bugs (coding errors) in the problem space.
+
 ## Usage
 
 The statement:
