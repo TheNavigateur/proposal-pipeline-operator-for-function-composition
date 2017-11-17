@@ -106,7 +106,7 @@ For the same reasons, it is possible to compose async and generator functions wi
 
 ### 4. Piping promises and iterators would be supported otherwise anyway
 
-Piping explicitly returned promises/iterators in a declared `Function` would work as expected anyway, so it is unclear what practical advantage there could possibly be of piping non-explicitly-returned promises/iterators instead of the declared output, in the cases of the examples in 1.
+Piping explicitly returned promises/iterators in a declared `Function` would work as expected anyway, so it is unclear what practical advantage there could possibly be of piping non-explicitly-returned promises/iterators, in the cases of the examples in 1., instead of the declared output.
 
 ## Isn't overloading an operator with different types producing different expression results a bad thing?
 
