@@ -22,19 +22,19 @@ is rewritable as:
 const doubleThenSquareThenHalf = double +> square +> half
 ```
 
-Introducing an `AsyncFunction` produces an `AsyncFunction`:
+Introducing an `AsyncFunction` produces an `AsyncFunction`, e.g.:
 
 ```javascript
 const doubleThenSquareThenHalfAsync = double +> squareAsync +> half
 ```
 
-Introducting a `GeneratorFunction` produces a `GeneratorFunction` that pipes each yielded value to subsequent functions:
+Introducting a `GeneratorFunction` produces a `GeneratorFunction` that pipes each yielded value to subsequent functions, e.g.:
 
 ```javascript
 const randomBetween0And100Generator = randomBetween0And1Generator +> multiplyBy100
 ```
 
-Introducing an `AsyncFunction` and a `GeneratorFunction`, and/or an `AsyncGeneratorFunction`, produces an `AsyncGeneratorFunction`:
+Introducing an `AsyncFunction` and a `GeneratorFunction`, and/or an `AsyncGeneratorFunction`, produces an `AsyncGeneratorFunction`, e.g.:
 
 ```javascript
 const nextRouteAsyncGenerator = nextLocationGenerator +> calculateRouteAsync //GeneratorFunction +> AsyncFunction
