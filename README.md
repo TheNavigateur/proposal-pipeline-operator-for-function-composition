@@ -22,7 +22,7 @@ is rewritable as:
 const doubleThenSquareThenHalf = double +> square +> half
 ```
 
-Introducing an `AsyncFunction` produces an `AsyncFunction`, e.g.:
+Introducing an `AsyncFunction` produces an `AsyncFunction` that pipes its declared return value to subsequent functions, e.g.:
 
 ```javascript
 const doubleThenSquareThenHalfAsync = double +> squareAsync +> half
