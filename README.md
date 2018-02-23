@@ -34,7 +34,7 @@ Introducting a `GeneratorFunction` produces a `GeneratorFunction` that pipes eac
 const randomBetween0And100Generator = randomBetween0And1Generator +> multiplyBy100
 ```
 
-Introducing an `AsyncFunction` and a `GeneratorFunction`, and/or an `AsyncGeneratorFunction`, produces an `AsyncGeneratorFunction`, e.g.:
+Introducing an `AsyncFunction` and a `GeneratorFunction`, and/or an `AsyncGeneratorFunction`, produces an `AsyncGeneratorFunction` that in each case pipes its expressed return value or each expressed yielded value to subsequent functions, e.g.:
 
 ```javascript
 const nextRouteAsyncGenerator = nextLocationGenerator +> calculateRouteAsync //GeneratorFunction +> AsyncFunction
